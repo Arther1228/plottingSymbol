@@ -1,0 +1,12 @@
+说明：
+1.filelist.txt中的内容是iClientJavaScriptPlottingSymbols\PlottingSymbols目录下的.js文件列表。
+文件列表顺序的一个规则是：父类文件在子类文件之前。
+
+2.mergeAndCompressCode.bat是文件合并与压缩批处理文件，
+执行该文件可以将filelist.txt中指定的文件在tools目录的上级目录下生成两个单文件的标会扩展符号库，
+iClientJavaScriptPlottingSymbols.js是合并未压缩的库，iClientJavaScriptPlottingSymbols-min.js是合并且压缩后的库。
+(iClientJavaScriptPlottingSymbols.js或iClientJavaScriptPlottingSymbols-min.js已存在，它们将被删除后重新生成)
+
+3.yuicompressor-2.4.2.jar 是.js文件压缩工具。
+
+4.执行mergeAndCompressCode.bat，如果出现“不是内部或者外部命令，也不是可运行的程序或者批处理”的情况，那么在相同目录下新建一个.bat文件，将mergeAndCompressCode里面的内容复制到新的.bat文件中，执行新的.bat文件。
