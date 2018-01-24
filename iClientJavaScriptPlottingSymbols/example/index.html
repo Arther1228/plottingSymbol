@@ -36,12 +36,16 @@ function init() {
     setLogoTitle("1,JavaScript 态势标绘")
     Bev.Theme.set("bev-base");
     initDemo();
-    window.center = new SuperMap.LonLat(7724209,3228485);
-    window.zoom = 3;
-    window.mapControlList = getMapControlList("1,2,3,4,5", 3);
+    window.center = new SuperMap.LonLat(117.214922, 31.875094924303);
+    window.zoom = 17;
+    //window.mapControlList = getMapControlList("1,2,3,4,5", 3);
 
     window.overlayParams = [];
-     createMap("supermapCloud",null);
+    //createMap("supermapCloud",null);
+	var iSeverOptions = {};
+	iSeverOptions.url = "http://160.18.24.237:8090/iserver/services/map-hfmap/rest/maps/hf";
+	iSeverOptions.layerName = "BottomMap";
+	createMap("iserver",iSeverOptions);
 
     addMeasure(1);
     addGeolocate(1);
